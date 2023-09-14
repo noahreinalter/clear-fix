@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "clear-fix",
+  "version": "${version}",
+  "name": "clear-fix",
+  "description": "",
+  "authors": [
+    "Noah Reinalter"
+  ],
+  "contact": {
+    "repo": "https://github.com/noahreinalter/clear-fix"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/clearfix/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+    ],
+    "main": [
+      "eu.reinalter.noah.clearfix.Clearfix"
+    ]
+  },
+  "mixins": [
+    "clear-fix.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
