@@ -21,7 +21,7 @@ public abstract class ClearCommandMixin {
     @Unique
     private static HashMap<ServerPlayerEntity, Long> clearInventoryTriesHashMap = new HashMap<>();
 
-    @Inject(method = "execute", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "execute*", at = @At("HEAD"), cancellable = true)
     private static void injected(ServerCommandSource source, Collection<ServerPlayerEntity> targets, Predicate<ItemStack> item, int maxCount, CallbackInfoReturnable<Integer> cir) {
         if (source.getPlayer() == null) {
             return;
